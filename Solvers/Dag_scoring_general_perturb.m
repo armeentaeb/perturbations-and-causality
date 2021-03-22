@@ -99,7 +99,7 @@ while max_dev >= 10^(-2) && fluctuation_count < 100
      iter = 0;
      score_improve = 1;
 
-    while overall_grad >= 10^(-3)  && increase_lik_sc <= 100 && (score_improve >= 10^(-6) || iter < 10)
+    while increase_lik_sc <= 100 && (score_improve >= 10^(-6) || iter < 10)
         
         iter = iter+1;
         Gradient_Gamma = zeros(p,rank_est);
