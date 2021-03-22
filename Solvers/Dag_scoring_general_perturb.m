@@ -72,7 +72,7 @@ zeta_old = rand(p,length(nvec));
 max_dev = 100;
 fluctuation_count = 0;
 sparse_pattern = find(abs(Dag_adj)<= 10^(-3));
-while max_dev >= 10^(-2) 
+while max_dev >= 10^(-2) && fluctuation_count < 100
     
     max_dev_old = max_dev;
     B_old = B_new; Gamma_old = Gamma_new; d0_old = d0_new;
@@ -99,7 +99,7 @@ while max_dev >= 10^(-2)
      iter = 0;
      score_improve = 1;
 
-    while (score_improve >= 10^(-6) )
+    while overall_grad >= 10^(-3)  && increase_lik_sc <= 100 && (score_improve >= 10^(-6) || iter < 10)
         
         iter = iter+1;
         Gradient_Gamma = zeros(p,rank_est);
