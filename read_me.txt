@@ -10,3 +10,5 @@ NOTE: CVX-MATLAB should be installed with its folder included in the main folder
 
 3) ``Synthetic_analysis": after executing 2, generates the synthetic results in the paper.
 
+4) "supplementary_figure": to generate the figures in supplementary material
+
